@@ -1,11 +1,10 @@
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 
-const gallery = document.querySelector('.gallery');
-
-const lishtBox = new SimpleLightbox('.gallery li a', {});
-
 export function getGalleryItems(items) {
+  const gallery = document.querySelector('.gallery');
+  const lishtBox = new SimpleLightbox('.gallery li a', {});
+
   items = items
     .map(
       ({
