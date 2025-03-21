@@ -1,8 +1,9 @@
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 
+const gallery = document.querySelector('.gallery');
+
 export function getGalleryItems(items) {
-  const gallery = document.querySelector('.gallery');
   const lishtBox = new SimpleLightbox('.gallery li a', {});
 
   items = items
@@ -46,4 +47,8 @@ export function getGalleryItems(items) {
   gallery.insertAdjacentHTML('beforeend', items);
 
   lishtBox.refresh();
+}
+
+export function clearElement(element) {
+  element.innerHTML = '';
 }
